@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b7ra3qvpsbdim"]
+
+[ext_resource type="Script" uid="uid://4u25k6neq6t5" path="res://obstaculo_accionable.gd" id="1_k45un"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_apint"]
+size = Vector3(1.5, 2, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_apint"]
+size = Vector3(1.5, 2, 0.2)
+
+[node name="ObstaculoAccionable" type="Node3D" unique_id=811275886]
+script = ExtResource("1_k45un")
+
+[node name="Pivot" type="AnimatableBody3D" parent="." unique_id=1663616221]
+metadata/_edit_group_ = true
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="Pivot" unique_id=1269370824]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("BoxMesh_apint")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pivot" unique_id=1941991668]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_apint")

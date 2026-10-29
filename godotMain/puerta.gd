@@ -1,4 +1,5 @@
 extends StaticBody3D
+class_name Puerta
 
 @export var velocidad := 1
 
